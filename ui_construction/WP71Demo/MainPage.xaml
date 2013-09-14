@@ -1,0 +1,49 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="WP71Demo.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <ScrollViewer>
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="{Binding Path=AppResources.AppTitle, Source={StaticResource LocalizedStrings}}" 
+                       Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+           <StackPanel Orientation="Horizontal" Height="120" VerticalAlignment="Top" >
+                    <Button Name="SharedButton1" Click="SharedButton_Click"
+                            Content="{Binding Path=AppResources.SharedButton1, Source={StaticResource LocalizedStrings}}"/>
+                    <Button Name="SharedButton2"  Click="SharedButton_Click"
+                            Content="{Binding Path=AppResources.SharedButton2, Source={StaticResource LocalizedStrings}}"/>
+             </StackPanel>
+             
+            <StackPanel Margin="50, 250, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Button Name="anotherButton" Content="{Binding Path=AppResources.Button3, Source={StaticResource LocalizedStrings}}"/>
+                    <TextBox Name="textBox" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" VerticalAlignment="Top" Width="350"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=AppResources.TextBlockString, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
+                </StackPanel>
+            </Grid>
+           
+        </Grid>
+    </ScrollViewer>
+    
+</phone:PhoneApplicationPage>
