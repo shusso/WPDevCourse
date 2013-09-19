@@ -11,7 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True" d:DesignHeight="768" d:DesignWidth="480">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
     <ScrollViewer>
@@ -29,18 +29,16 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-           <StackPanel Orientation="Horizontal" Height="120" VerticalAlignment="Top" >
-                    <Button Name="SharedButton1" Click="SharedButton_Click"
-                            Content="{Binding Path=AppResources.SharedButton1, Source={StaticResource LocalizedStrings}}"/>
-                    <Button Name="SharedButton2"  Click="SharedButton_Click"
-                            Content="{Binding Path=AppResources.SharedButton2, Source={StaticResource LocalizedStrings}}"/>
-             </StackPanel>
-             
-            <StackPanel Margin="50, 250, 0, 0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Button Name="anotherButton" Content="{Binding Path=AppResources.Button3, Source={StaticResource LocalizedStrings}}"/>
-                    <TextBox Name="textBox" HorizontalAlignment="Left" Height="80" TextWrapping="Wrap" VerticalAlignment="Top" Width="350"/>
-                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Path=AppResources.TextBlockString, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top"/>
-                </StackPanel>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="457*" />
+                    <RowDefinition Height="177*" />
+                </Grid.RowDefinitions>
+                <StackPanel Margin="50,442,0,192" VerticalAlignment="Center" HorizontalAlignment="Center"></StackPanel>
+                <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.Button3}" VerticalAlignment="Top" Margin="33,413,0,0" Width="167" Name="passwordText" />
+                <TextBox Name="passwordBox" TextWrapping="Wrap" Margin="33,442,32,115" Text="{Binding Path=AppResources.passwdBox, Mode=TwoWay, Source={StaticResource LocalizedStrings}}" />
+                <TextBox Height="72" HorizontalAlignment="Left" Margin="33,335,0,0" Name="usernameBox" Text="{Binding Path=AppResources.usernameBox, Mode=TwoWay, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="390" TextChanged="textBox1_TextChanged" />
+                <TextBlock Height="30" HorizontalAlignment="Left" Margin="33,295,0,0" Name="textBlock1" Text="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.usernameString}" VerticalAlignment="Top" />
+                <TextBlock Height="30" HorizontalAlignment="Left" Margin="33,410,0,0" Name="textBlock2" Text="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.passwdString}" VerticalAlignment="Top" />
             </Grid>
            
         </Grid>

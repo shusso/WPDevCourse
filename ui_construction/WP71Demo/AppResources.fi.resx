@@ -118,6 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppTitle" xml:space="preserve">
-    <value>WP7 demo in Finnish</value>
+    <value>UI Ohjelma</value>
+  </data>
+  <data name="loginBox" xml:space="preserve">
+    <value>Kirjaudu</value>
+  </data>
+  <data name="MessageBoxString" xml:space="preserve">
+    <value>viesti popuppi</value>
+  </data>
+  <data name="passwdBox" xml:space="preserve">
+    <value>Syota Salasana</value>
+  </data>
+  <data name="passwdString" xml:space="preserve">
+    <value>salasana</value>
+  </data>
+  <data name="usernameBox" xml:space="preserve">
+    <value>Syota Kayttajanimi</value>
+  </data>
+  <data name="usernameString" xml:space="preserve">
+    <value>kayttajanimi</value>
   </data>
 </root>

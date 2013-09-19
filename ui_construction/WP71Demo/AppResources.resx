@@ -118,21 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppTitle" xml:space="preserve">
-    <value>WP7 demo</value>
+    <value>UI Construct</value>
   </data>
-  <data name="Button3" xml:space="preserve">
-    <value>Another button</value>
+  <data name="loginBox" xml:space="preserve">
+    <value>Login</value>
   </data>
   <data name="MessageBoxString" xml:space="preserve">
     <value>Message popup!</value>
   </data>
-  <data name="SharedButton1" xml:space="preserve">
-    <value>Shared button 1</value>
+  <data name="passwdBox" xml:space="preserve">
+    <value>Insert Password</value>
   </data>
-  <data name="SharedButton2" xml:space="preserve">
-    <value>Shared button 2</value>
+  <data name="passwdString" xml:space="preserve">
+    <value>Password</value>
   </data>
-  <data name="TextBlockString" xml:space="preserve">
-    <value>This is a text block.</value>
+  <data name="usernameBox" xml:space="preserve">
+    <value>Insert Username</value>
+  </data>
+  <data name="usernameString" xml:space="preserve">
+    <value>Username</value>
   </data>
 </root>

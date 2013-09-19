@@ -20,7 +20,7 @@ namespace WP71Demo
         /// <param name="e"></param>
         void MainPage_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            anotherButton.Click += anotherButton_Click;
+           //anotherButton.Click += anotherButton_Click;
         }
 
         /// <summary>
@@ -60,16 +60,21 @@ namespace WP71Demo
                 Button button = sender as Button;
                 if (button != null)
                 {
-                    if (SharedButton1.Name.Equals(button.Name))
-                    {
-                        System.Diagnostics.Debug.WriteLine("Shared button 1");
-                    }
-                    else if (SharedButton2.Name.Equals(button.Name))
-                    {
-                        System.Diagnostics.Debug.WriteLine("Shared button 2");
-                    }
+                    //if (SharedButton1.Name.Equals(button.Name))
+                    //{
+                    //    System.Diagnostics.Debug.WriteLine("Shared button 1");
+                    //}
+                    //else if (SharedButton2.Name.Equals(button.Name))
+                    //{
+                    //    System.Diagnostics.Debug.WriteLine("Shared button 2");
+                    //}
                 }            
             }
+        }
+
+        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
 
 
