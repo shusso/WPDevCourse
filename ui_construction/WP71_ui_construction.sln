@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010 Express for Windows Phone
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP71Demo", "WP71Demo\WP71Demo.csproj", "{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui_construction", "WP71Demo\ui_construction.csproj", "{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

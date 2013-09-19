@@ -63,27 +63,27 @@ namespace WP71Demo {
         /// <summary>
         ///   Looks up a localized string similar to UI Construct.
         /// </summary>
-        public static string AppTitle {
+        public static string AppTitleString {
             get {
-                return ResourceManager.GetString("AppTitle", resourceCulture);
+                return ResourceManager.GetString("AppTitleString", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Load the lite version.
         /// </summary>
-        public static string lightCheck {
+        public static string lightCheckString {
             get {
-                return ResourceManager.GetString("lightCheck", resourceCulture);
+                return ResourceManager.GetString("lightCheckString", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Signin.
         /// </summary>
-        public static string loginBox {
+        public static string loginBoxString {
             get {
-                return ResourceManager.GetString("loginBox", resourceCulture);
+                return ResourceManager.GetString("loginBoxString", resourceCulture);
             }
         }
         
@@ -99,9 +99,9 @@ namespace WP71Demo {
         /// <summary>
         ///   Looks up a localized string similar to Insert Password.
         /// </summary>
-        public static string passwdBox {
+        public static string passwdBoxString {
             get {
-                return ResourceManager.GetString("passwdBox", resourceCulture);
+                return ResourceManager.GetString("passwdBoxString", resourceCulture);
             }
         }
         
@@ -117,27 +117,27 @@ namespace WP71Demo {
         /// <summary>
         ///   Looks up a localized string similar to Select for Private Computer.
         /// </summary>
-        public static string privateRadio {
+        public static string privateRadioString {
             get {
-                return ResourceManager.GetString("privateRadio", resourceCulture);
+                return ResourceManager.GetString("privateRadioString", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Select for Public Computer.
         /// </summary>
-        public static string publicRadio {
+        public static string publicRadioString {
             get {
-                return ResourceManager.GetString("publicRadio", resourceCulture);
+                return ResourceManager.GetString("publicRadioString", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Insert Username.
         /// </summary>
-        public static string usernameBox {
+        public static string usernameBoxString {
             get {
-                return ResourceManager.GetString("usernameBox", resourceCulture);
+                return ResourceManager.GetString("usernameBoxString", resourceCulture);
             }
         }
         

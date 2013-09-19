@@ -2,6 +2,7 @@
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Diagnostics;
 
 namespace WP71Demo
 {
@@ -10,74 +11,39 @@ namespace WP71Demo
         public MainPage()
         {
             InitializeComponent();
-            Loaded += MainPage_Loaded;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void MainPage_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        // clear the default text when user moves focus to username/password box
+        private void usernameBox_GotFocus(object sender, RoutedEventArgs e)
         {
-           //anotherButton.Click += anotherButton_Click;
+            usernameBox.Text = "";
+        }
+        private void passwordBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            passwordBox.Text = "";
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void anotherButton_Click(object sender, System.Windows.RoutedEventArgs e)
+        // make small checks in on Click Event
+        private void loginButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(AppResources.MessageBoxString);
-            //MessageBoxResult msgResult = MessageBox.Show(AppResources.MessageBoxString, "", MessageBoxButton.OKCancel);
-            //if (msgResult == MessageBoxResult.OK)
-            //{
-            //    System.Diagnostics.Debug.WriteLine("OK");
-
-            //    // make sure that navigation is performed in UI thread.
-            //    Deployment.Current.Dispatcher.BeginInvoke(() =>
-            //    {
-            //        NavigationService.Navigate(new Uri("/View/SecondPage.xaml?param=yes", UriKind.Relative));                    
-            //    });
-            //}
-            //else if (msgResult == MessageBoxResult.Cancel)
-            //{
-            //    System.Diagnostics.Debug.WriteLine("Cancel");
-            //}
-        }
-
-        /// <summary>
-        /// Shared button click event handler
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void SharedButton_Click(object sender, System.Windows.RoutedEventArgs e)
-        {
-            if (sender != null)
+            if (usernameBox.Text.Trim() == "" || passwordBox.Text.Trim() == "")
             {
-                Button button = sender as Button;
-                if (button != null)
+                MessageBox.Show("Username or Password incorrect.");
+            }
+            else
+            {
+                if (liteCheckBox.IsChecked.Value)
                 {
-                    //if (SharedButton1.Name.Equals(button.Name))
-                    //{
-                    //    System.Diagnostics.Debug.WriteLine("Shared button 1");
-                    //}
-                    //else if (SharedButton2.Name.Equals(button.Name))
-                    //{
-                    //    System.Diagnostics.Debug.WriteLine("Shared button 2");
-                    //}
-                }            
+                    MessageBox.Show("Login To Lite Version");
+                }
+                else
+                {
+                    MessageBox.Show("Login Successfull");
+                }
+
+                
             }
         }
-
-        private void textBox1_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
 
     }
 }
