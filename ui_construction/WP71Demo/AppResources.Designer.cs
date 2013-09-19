@@ -70,7 +70,16 @@ namespace WP71Demo {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Login.
+        ///   Looks up a localized string similar to Load the lite version.
+        /// </summary>
+        public static string lightCheck {
+            get {
+                return ResourceManager.GetString("lightCheck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Signin.
         /// </summary>
         public static string loginBox {
             get {
@@ -102,6 +111,24 @@ namespace WP71Demo {
         public static string passwdString {
             get {
                 return ResourceManager.GetString("passwdString", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select for Private Computer.
+        /// </summary>
+        public static string privateRadio {
+            get {
+                return ResourceManager.GetString("privateRadio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select for Public Computer.
+        /// </summary>
+        public static string publicRadio {
+            get {
+                return ResourceManager.GetString("publicRadio", resourceCulture);
             }
         }
         

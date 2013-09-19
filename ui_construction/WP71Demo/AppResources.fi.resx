@@ -120,6 +120,9 @@
   <data name="AppTitle" xml:space="preserve">
     <value>UI Ohjelma</value>
   </data>
+  <data name="lightCheck" xml:space="preserve">
+    <value>Lataa kevyt versio</value>
+  </data>
   <data name="loginBox" xml:space="preserve">
     <value>Kirjaudu</value>
   </data>
@@ -131,6 +134,12 @@
   </data>
   <data name="passwdString" xml:space="preserve">
     <value>salasana</value>
+  </data>
+  <data name="privateRadio" xml:space="preserve">
+    <value>Privaatti kone</value>
+  </data>
+  <data name="publicRadio" xml:space="preserve">
+    <value>Julkinen kone</value>
   </data>
   <data name="usernameBox" xml:space="preserve">
     <value>Syota Kayttajanimi</value>

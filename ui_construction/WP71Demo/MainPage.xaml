@@ -39,6 +39,10 @@
                 <TextBox Height="72" HorizontalAlignment="Left" Margin="33,335,0,0" Name="usernameBox" Text="{Binding Path=AppResources.usernameBox, Mode=TwoWay, Source={StaticResource LocalizedStrings}}" VerticalAlignment="Top" Width="390" TextChanged="textBox1_TextChanged" />
                 <TextBlock Height="30" HorizontalAlignment="Left" Margin="33,295,0,0" Name="textBlock1" Text="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.usernameString}" VerticalAlignment="Top" />
                 <TextBlock Height="30" HorizontalAlignment="Left" Margin="33,410,0,0" Name="textBlock2" Text="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.passwdString}" VerticalAlignment="Top" />
+                <Button Content="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.loginBox}" Height="72" HorizontalAlignment="Left" Margin="280,541,0,0" Name="button1" VerticalAlignment="Top" Width="160" />
+                <RadioButton Content="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.publicRadio}" Height="72" HorizontalAlignment="Left" Margin="33,53,0,0" Name="radioButton1" VerticalAlignment="Top" IsChecked="True" />
+                <RadioButton Content="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.privateRadio}" Height="72" HorizontalAlignment="Left" Margin="33,131,0,0" Name="radioButton2" VerticalAlignment="Top" />
+                <CheckBox Content="{Binding Source={StaticResource LocalizedStrings}, Path=AppResources.lightCheck}" Height="72" HorizontalAlignment="Left" Margin="33,209,0,0" Name="checkBox1" VerticalAlignment="Top" />
             </Grid>
            
         </Grid>

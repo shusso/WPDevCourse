@@ -120,8 +120,11 @@
   <data name="AppTitle" xml:space="preserve">
     <value>UI Construct</value>
   </data>
+  <data name="lightCheck" xml:space="preserve">
+    <value>Load the lite version</value>
+  </data>
   <data name="loginBox" xml:space="preserve">
-    <value>Login</value>
+    <value>Signin</value>
   </data>
   <data name="MessageBoxString" xml:space="preserve">
     <value>Message popup!</value>
@@ -131,6 +134,12 @@
   </data>
   <data name="passwdString" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="privateRadio" xml:space="preserve">
+    <value>Select for Private Computer</value>
+  </data>
+  <data name="publicRadio" xml:space="preserve">
+    <value>Select for Public Computer</value>
   </data>
   <data name="usernameBox" xml:space="preserve">
     <value>Insert Username</value>
