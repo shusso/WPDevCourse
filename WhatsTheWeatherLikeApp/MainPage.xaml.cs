@@ -13,10 +13,10 @@ using Microsoft.Phone.Controls;
 
 namespace WhatsTheWeatherLikeApp
 {
-    public partial class WeatherMainPage : PhoneApplicationPage
+    public partial class MainPage : PhoneApplicationPage
     {
         // Constructor
-        public WeatherMainPage()
+        public MainPage()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace WhatsTheWeatherLikeApp
 
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
-            if (citySearchBox.Text.Trim() == "" || citySearchBox.Text.Trim() == "City name") {
+            if (citySearchBox.Text.Trim() == "" || citySearchBox.Text.Trim() == "city name") {
                 MessageBox.Show("City name not given. Cannot search");
                 return;
             }
