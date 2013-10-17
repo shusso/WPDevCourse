@@ -13,10 +13,9 @@ using Microsoft.Phone.Controls;
 
 namespace WhatsTheWeatherLikeApp
 {
-    public partial class MainPage : PhoneApplicationPage
+    public partial class WeatherInfoPage : PhoneApplicationPage
     {
-        // Constructor
-        public MainPage()
+        public WeatherInfoPage()
         {
             InitializeComponent();
         }
