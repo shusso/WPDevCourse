@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010 Express for Windows Phone
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ui_construction", "ui_construction\ui_construction.csproj", "{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatsTheWeatherLikeApp", "WhatsTheWeatherLikeApp\WhatsTheWeatherLikeApp.csproj", "{96B7C6AE-695E-476B-A523-70864945FA89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC891E66-F91A-4CBF-B74A-25C945A4A8DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96B7C6AE-695E-476B-A523-70864945FA89}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
