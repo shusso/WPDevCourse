@@ -19,5 +19,10 @@ namespace WhatsTheWeatherLikeApp
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }

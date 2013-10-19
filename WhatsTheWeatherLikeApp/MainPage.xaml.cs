@@ -34,7 +34,10 @@ namespace WhatsTheWeatherLikeApp
             }
 
 
+            /* Do the actual stuff here */
 
+
+            NavigationService.Navigate(new Uri("/WeatherInfoPage.xaml", UriKind.Relative));
         }
     }
 }
