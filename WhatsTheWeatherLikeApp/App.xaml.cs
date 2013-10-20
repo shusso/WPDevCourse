@@ -12,11 +12,65 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Threading;
+using System.IO;
+using System.IO.IsolatedStorage;
 
 namespace WhatsTheWeatherLikeApp
 {
     public partial class App : Application
     {
+        /* stores the application state */
+        private string _applicationDataObject;
+        /* event when the application data changes */
+        public event EventHandler ApplicationDataObjectChanged;
+        /* property to access the the application data var */
+        public string ApplicationDataObject
+        {
+            get { return _applicationDataObject; }
+            set
+            {
+                if (value != _applicationDataObject)
+                {
+                    _applicationDataObject = value;
+                    OnApplicationDataObjectChanged(EventArgs.Empty);
+                }
+            }
+        }
+        /* raises the appdataobjchg event */
+        protected void OnApplicationDataObjectChanged(EventArgs e)
+        {
+            EventHandler handler = ApplicationDataObjectChanged;
+            if (handler != null)
+            {
+                handler(this, e);
+            }
+        }
+
+        /* property to store the status of the application */
+        public string ApplicationDataStatus { get; set; }
+
+        public void GetDataAsync()
+        {
+            Thread t = new Thread(new ThreadStart(GetData));
+            t.Start();
+        }
+
+        private void GetData()
+        {
+            ApplicationDataStatus = "ThisBeData";
+            ApplicationDataObject = "sumData";
+        }
+
+        private void SaveDataToIsolatedStorage(string isoFilename, string value)
+        {
+            IsolatedStorageFile isoStore = IsolatedStorageFile.GetUserStoreForApplication();
+            StreamWriter sw = new StreamWriter(isoStore.OpenFile(isoFilename, FileMode.OpenOrCreate));
+            sw.Write(value);
+            sw.Close();
+            IsolatedStorageSettings.ApplicationSettings["DataLastSaveTime"] = DateTime.Now;
+        }
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
@@ -69,18 +123,46 @@ namespace WhatsTheWeatherLikeApp
         // This code will not execute when the application is first launched
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
+            /* handle tombstoning */
+            if (e.IsApplicationInstancePreserved)
+            {
+                MessageBox.Show("ApplicationInstPreserverd");
+                ApplicationDataStatus = "application instance preserverd";
+                return;
+            }
+            /* check do we have the state data */
+            if (PhoneApplicationService.Current.State.ContainsKey("ApplicationDataObject"))
+            {
+                MessageBox.Show("Current State Contains Key");
+
+                /* if we do get, assign it so we can access it */
+                ApplicationDataStatus = "data from preserved state";
+                ApplicationDataObject = PhoneApplicationService.Current.State["ApplicationDataObject"] as string;
+            }
         }
 
         // Code to execute when the application is deactivated (sent to background)
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            if (!string.IsNullOrEmpty(ApplicationDataObject))
+            {
+                MessageBox.Show("Storing Data to Current State");
+                PhoneApplicationService.Current.State["ApplicationDataObject"] = ApplicationDataObject;
+                //SaveDataToIsolatedStorage("mydata", ApplicationDataObject);
+            }
+            else { MessageBox.Show("ApplicationDataObj is null"); }
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
         // This code will not execute when the application is deactivated
         private void Application_Closing(object sender, ClosingEventArgs e)
         {
+            if (!string.IsNullOrEmpty(ApplicationDataObject))
+            {
+                MessageBox.Show("Store to IsolatedStorage");
+                //SaveDataToIsolatedStorage("mydata", ApplicationDataObject);
+            }
         }
 
         // Code to execute if a navigation fails
